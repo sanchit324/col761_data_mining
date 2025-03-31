@@ -6,8 +6,8 @@ if [ "$#" -ne 4 ]; then
     exit 1
 fi
 
-# Compile the C++ program (if not already compiled)
-g++ -std=c++11 -o main main.cpp
+# Compile the C++ program with C++11 standard
+g++ -std=c++11 ./src/main.cpp -o main -pthread
 
 # Run the program with the provided arguments
 ./main "$1" "$2" "$3" "$4"
